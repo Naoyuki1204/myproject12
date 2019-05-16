@@ -1,0 +1,466 @@
+/*** ？？？ ***/
+.cp_ipselect {
+ overflow: hidden;
+ width: 90%;
+ margin: 2em auto;
+ text-align: center;
+}
+.cp_ipselect select {
+ width: 100%;
+ padding-right: 1em;
+ cursor: pointer;
+ text-indent: 0.01px;
+ text-overflow: ellipsis;
+ border: none;
+ outline: none;
+ background: transparent;
+ background-image: none;
+ box-shadow: none;
+ -webkit-appearance: none;
+ appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl04 {
+ position: relative;
+ border-radius: 2px;
+ border: 2px solid #da3c41;
+  border-radius: 50px;
+ background: #ffffff;
+}
+.cp_ipselect.cp_sl04::before {
+ position: absolute;
+ top: 0.8em;
+ right: 0.8em;
+ width: 0;
+ height: 0;
+ padding: 0;
+ content: '';
+ border-left: 6px solid transparent;
+ border-right: 6px solid transparent;
+ border-top: 6px solid #da3c41;
+ pointer-events: none;
+}
+.cp_ipselect.cp_sl04 select {
+ padding: 8px 38px 8px 8px;
+ color: #da3c41;
+}
+
+
+
+
+
+/*** ラジオボタンを四角いデザインにしています ***/
+
+.sample input{
+ display: none;
+}
+.sample label{
+ display: block;
+ float: left;
+ cursor: pointer;
+ width: 80px;
+ margin: 0;
+ padding: 12px 5px;
+ border-right: 1px solid #abb2b7;
+ background: #bdc3c7;
+ color: #555e64;
+ font-size: 14px;
+ text-align: center;
+ line-height: 1;
+ transition: .2s;
+}
+.sample label:first-of-type{
+ border-radius: 3px 0 0 3px;
+}
+.sample label:last-of-type{
+ border-right: 0px;
+ border-radius: 0 3px 3px 0;
+}
+.sample input[type="radio"]:checked + label {
+ background-color: #a1b91d;
+ color: #fff;
+}
+
+
+
+
+/*** テーブル Chromeカラー ***/
+ 
+ 
+ 
+.osare2-table {
+ width:100%;
+ table-layout: fixed;
+ border: none !important;
+ border-collapse: separate;
+ border-spacing: 7px 0px;
+}
+
+.osare2-table tfoot td {
+ border-radius: 0 0 10px 10px;
+}
+
+.osare2-table th {
+ border: none !important;
+ border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+}
+ 
+.osare2-table tbody td {
+ border: none !important;
+ background-color:#FFF9FF !important;
+ border-bottom: solid 2px #f9f9f9 !important;
+}
+ 
+/* ヘッダー */
+.osare2-table thead th {
+ font-weight: bold;
+}
+ 
+ 
+/* ボディ項目・フッター項目 */
+.osare2-table tbody th,
+.osare2-table tfoot th {
+ background:#FFF;
+ font-weight: bold;
+ border-bottom: solid 2px #f9f9f9 !important;
+ line-height:4.5em;
+}
+ 
+ 
+ 
+/* ボディデータ・フッターデータ */
+.osare2-table tbody td,
+.osare2-table tfoot td {
+ text-align:center;
+}
+ 
+/* ヘッダー行 １列ごとの色変え */
+.osare2-table thead th:nth-child(1)  {
+ background:#FFF;
+}
+ 
+.osare2-table thead th:nth-child(2)  {
+ background: #1DA462;
+}
+.osare2-table thead th:nth-child(3)  {
+ background: #DD5144;
+}
+.osare2-table thead th:nth-child(4)  {
+ background: #FFCD46;
+}
+.osare2-table thead th:nth-child(5)  {
+ background: #4C8BF5;
+}
+
+
+/* 最終行のボーダーをなくす */
+.osare2-table tbody tr:last-child th,
+.osare2-table tbody tr:last-child td,
+.osare2-table tfoot tr:last-child th{
+ border-bottom:none !important;
+}
+
+/* スマホ調整 */
+@media (max-width: 767px) {
+    .osare2-table thead th,
+    .osare2-table tbody th {
+            padding:0;
+    }
+    .osare2-table tfoot td {
+    padding:0;
+    font-size:0.9em;
+    }
+.osare2-table tfoot td:nth-child(2) {
+     font-size:1em;
+    }
+    
+}
+
+/*（共通） 項目の多いテーブルの幅を調整*/
+@media (max-width: 767px) {
+ .col6t th,
+ .col6t td{
+ font-size:0.4em;
+ padding: 10px 0px;
+ }
+ .col5t th,
+ .col5t td{
+ font-size:0.5em;
+ padding: 10px 0px;
+ }
+ .col4t th,
+ .col4t td{
+ font-size:0.7em;
+ padding: 10px 5px;
+ }
+ .col3t th,
+ .col3t td{
+ font-size:0.8em;
+ padding: 10px 10px;
+ }
+}
+
+
+
+.cp_iptxt {
+position: relative;
+width: 40%;
+margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+font: 15px/24px sans-serif;
+box-sizing: border-box;
+width: 30%;
+letter-spacing: 1px;
+padding-left: 4em;
+}
+.cp_iptxt input[type='text']:focus {
+outline: none;
+}
+.ef {
+padding: 4px 0;
+border: 0;
+border-bottom: 1px solid #1b2538;
+background-color: transparent;
+}
+.ef ~ .focus_line {
+position: absolute;
+z-index: 99;
+bottom: 0;
+left: 0;
+width: 40%;
+height: 2px;
+}
+.ef ~ .focus_line:before,
+.ef ~ .focus_line:after {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 100%;
+content: '';
+transition: 0.4s;
+background-color: #da3c41;
+}
+.ef ~ .focus_line:after {
+right: 0;
+left: auto;
+}
+.ef:focus ~ .focus_line:before,
+.ef:focus ~ .focus_line:after,
+.cp_iptxt.ef ~ .focus_line:before,
+.cp_iptxt.ef ~ .focus_line:after {
+width: 50%;
+transition: 0.4s;
+}
+.ef ~ label {
+position: absolute;
+z-index: -1;
+top: 4px;
+left: 0;
+width: 100%;
+transition: 0.3s;
+letter-spacing: 0.5px;
+color: #aaaaaa;
+}
+.ef:focus ~ label,
+.cp_iptxt.ef ~ label {
+font-size: 12px;
+top: -16px;
+transition: 0.3s;
+color: #da3c41;
+}
+
+
+
+
+
+header {
+ height: 35px; /*ヘッダーの高さ*/
+ width: 100%; /*ヘッダーの横幅*/
+ background-color: #f8f9fa; /*ヘッダーの背景色*/
+ color: black; /*ヘッダーの文字の色*/
+}
+ 
+header p {
+ line-height: 35px; /*行の高さ*/
+ float: left; /*左に流す*/
+ font-size: 20px; /*文字の大きさ*/
+ margin-left: 170px; /*左にマージンを取っている*/
+}
+ 
+header nav {
+ float: left; /*左に流す*/
+ margin-left: 500px; /*左にマージンを取っている*/
+}
+ 
+header li {
+ line-height: 15px; /*行の高さ*/
+ float: left; /*左に流す*/
+ margin-left: 200px; /*li間の幅を開くために左にマージンを取っている*/
+ list-style: none; /*デフォルトでついているliの黒点をnoneにしている*/
+}
+
+
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../img/bg-enzin.jpg") no-repeat center center;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+
+
+body {
+    color:black;
+    background-color: #f8f9fa;
+    font-size:16pt;
+    font-family: "Century Gothic"; 
+    
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+    color:red;
+    opacity:0.8;
+    font-size:60pt;
+    margin-top:-20px;
+    margin-bottom:0px;
+    text-align:left;
+}
+
+p {
+    margin:10px;
+}
+a {
+    color:blue;
+    text-decoration: none;
+}
+
+
+h10 {
+    color:red;
+    font-size:30pt;
+}
+h11 {
+    color:blue;
+    font-size:30pt;
+}
+
+h12 {
+    color:orange;
+    font-size:30pt;
+}
+h13 {
+    color:limegreen;
+    font-size:30pt;
+}
+
+/*** 近未来型のボタン ***/
+
+.square_btn{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
+    padding: 0.3em 0.5em;
+    background: #00bcd4;
+    border-top: solid 3px #00a3d4;
+    border-bottom: solid 3px #00a3d4;
+    transition: .4s;
+}
+
+.square_btn:hover {
+    text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
+}
+
+
+.container {
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: space-around;
+  }
+  
+.myChart {
+      width: 600px;
+      height: 400px;
+      border: 1px solid #fff;
+      background-color: #000000
+      text-align: center;
+      line-height: 150px;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  
+.myChart6{
+      flex-wrap: wrap;
+      justify-content: space-around;
+}
+
+.under {
+  border-bottom: dotted 2px #000000;
+  }
+  
+  
+.btn2 {
+    font-size:40pt;
+    height: 120px;
+    width:  300px;
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #48d1cc;/*色*/
+    border-radius: 4px;/*角の丸み*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: solid 2px #6495ed;/*線色*/
+}
+
+.btn2:active {/*押したとき*/
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+}
+
+select:focus {
+  border: solid 2px #da0b00;
+}

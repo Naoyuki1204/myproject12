@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" 
+      href="{% static 'Semantic-UI-master/dist/components/style.css' %}">
+       <!-- a:link { color: #000000; }
+        a:visited { color: #000000; }
+        a:hover { color: #008000; }
+        a:active { color: #006400; }-->
+
+</style>
+</head>
+
+<header>
+ <p><a href="{% url goto %}">SofttennisDataBase</a></p>
+ <nav>
+  <ul>
+   <li><a href="http://www.keio-stc.com">KEIO STC</a></li>
+  </ul>
+ </nav>
+</header>
+
+<body style="margin-top: 0;margin-left: 0;margin-right: 0;margin-bottom: 0;">
+    <div class="resizeimage">
+   <img src="{% static 'score/bg-enzin-find.png' %}" style="width:100%;height:auto;"">
+</div>
+   <div class="cp_iptxt"> 
+    <form action="{% url 'video' %}" class="ef" method="post" >
+    {% csrf_token %}
+          
+
+
+<span class="focus_line"></span>
+ </div>
+  </form>
+    
+
+
+
+    <hr>
+   <table class="osare2-table col5t">
+   <thead>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+        </tr>
+        </thead>
+    {% for item in data %}
+        <tr>
+           <td>{{item.id}}</td>
+            <td><p>{{item.pname}}{{item.pname2}}</p></td>
+            <td><a href="{% url 'person' item.id %}">analys</a></td>
+        <tr>
+    {% endfor %}
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
