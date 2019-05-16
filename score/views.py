@@ -5,7 +5,7 @@ from .models import result
 from .models import before
 from .models import player
 from .forms import FindForm
-from pillow import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 from django.db.models import Q
 
 
