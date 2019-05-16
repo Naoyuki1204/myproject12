@@ -5,7 +5,7 @@ from .models import result
 from .models import before
 from .models import player
 from .forms import FindForm
-from PIL import Image, ImageDraw, ImageFont
+# from PIL import Image, ImageDraw, ImageFont
 from django.db.models import Q
 
 
@@ -416,53 +416,53 @@ def analys(request, num):
     countname = result.objects.filter(gameid=num).values('id','count')
     countname2 = countname[ii]['count']
 
-    im = Image.new('RGB', (230, 500), (248, 249, 250))
-    draw = ImageDraw.Draw(im)
+    #im = Image.new('RGB', (230, 500), (248, 249, 250))
+    #draw = ImageDraw.Draw(im)
     
-    draw.rectangle((46/2, 100/2, 414/2, 900/2),fill=(255,255,255),outline=(0,0,0))
+    #draw.rectangle((46/2, 100/2, 414/2, 900/2),fill=(255,255,255),outline=(0,0,0))
     #ベースとサイドライン
     
-    draw.line((92/2, 100/2, 92/2, 900/2),fill=(0,0,0))
+    #draw.line((92/2, 100/2, 92/2, 900/2),fill=(0,0,0))
     #あれーライン左
     
-    draw.line((368/2, 100/2, 368/2, 900/2),fill=(0,0,0))
+    #draw.line((368/2, 100/2, 368/2, 900/2),fill=(0,0,0))
     #あれーライン右
     
-    draw.line((40/2, 500/2, 420/2, 500/2),fill=(0,0,0))
+    #draw.line((40/2, 500/2, 420/2, 500/2),fill=(0,0,0))
     #ネット
     
-    draw.line((92/2, 285/2, 368/2, 285/2),fill=(0,0,0))
+    #draw.line((92/2, 285/2, 368/2, 285/2),fill=(0,0,0))
     #サービスライン上 正規の縮尺で
     
-    draw.line((92/2, 715/2, 368/2, 715/2),fill=(0,0,0))
+    #draw.line((92/2, 715/2, 368/2, 715/2),fill=(0,0,0))
     #サービスライン下
     
-    draw.line((230/2, 285/2, 230/2, 715/2),fill=(0,0,0))
+    #draw.line((230/2, 285/2, 230/2, 715/2),fill=(0,0,0))
     #サービスセンターライン
     
-    draw.line(((23+46*(bx))/2,(50+100*(by-1))/2,(23+46*(cx))/2,(50+100*(cy-1))/2),fill=resultco1, width=6) 
+    #draw.line(((23+46*(bx))/2,(50+100*(by-1))/2,(23+46*(cx))/2,(50+100*(cy-1))/2),fill=resultco1, width=6) 
     #ボールの起動（赤色の線）
     
-    draw.line(((23+46*(bx2))/2,(50+100*(by2-1))/2,(23+46*(cx2))/2,(50+100*(cy2-1))/2),fill=beforeco1, width=2) 
+    #draw.line(((23+46*(bx2))/2,(50+100*(by2-1))/2,(23+46*(cx2))/2,(50+100*(cy2-1))/2),fill=beforeco1, width=2) 
     #ボールの起動（青色の線）
 
     
-    font = ImageFont.truetype("/Library/Fonts/Futura.ttc", 22)
-    draw.text(((46*(bx-1))/2, (100*(by-1))/2),data201 , fill=(0, 0, 0),font=font)
+    #font = ImageFont.truetype("/Library/Fonts/Futura.ttc", 22)
+    #draw.text(((46*(bx-1))/2, (100*(by-1))/2),data201 , fill=(0, 0, 0),font=font)
     #フォアクロスとかの文字が出る位置
     
-    draw.text(((23+46*(cx2-1)+5)/2, (50+100*(cy2-1)+5)/2), '['+data20b+']', fill=(0, 0, 0),font=font)
+    #draw.text(((23+46*(cx2-1)+5)/2, (50+100*(cy2-1)+5)/2), '['+data20b+']', fill=(0, 0, 0),font=font)
     #bフォアクロスとかの文字が出る位置
 
     
-    draw.text(((23+46*(cx-1)+5)/2, (50+100*(cy-1)+5)/2), '['+data20+']', fill=(0, 0, 0),font=font)
+    #draw.text(((23+46*(cx-1)+5)/2, (50+100*(cy-1)+5)/2), '['+data20+']', fill=(0, 0, 0),font=font)
     #インとかサイドアウトとかが出る位置
     
-    draw.text((0,-4), countname2, fill=(255, 0, 0),font=font)
+    #draw.text((0,-4), countname2, fill=(255, 0, 0),font=font)
     #スコアのでる位置
-    aa = 'score/static/score/tenniscourt0.jpg'
-    imagename = aa
-    im.save(imagename, quality=95)
+    #aa = 'score/static/score/tenniscourt0.jpg'
+    #imagename = aa
+    #im.save(imagename, quality=95)
     params = {
         'title':'Hello',
         'id':num,
